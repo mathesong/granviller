@@ -1,0 +1,12 @@
+Package: granviller
+Title: Does the Things That Granville Does
+Version: 0.0.0.9000
+Authors@R: person("Granville", "Matheson", email = "mathesong@gmail.com", role = c("aut", "cre"))
+Description: This is a package of common functions which I use, inspired by
+    Hilary Parker's discussion on NSSD and Karl Broman's package of this sort
+Depends:
+    R (>= 3.3.0)
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 5.0.1

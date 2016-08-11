@@ -1,0 +1,3 @@
+cd <- function() {
+  setwd(readClipboard())
+}
