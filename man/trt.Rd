@@ -2,33 +2,21 @@
 % Please edit documentation in R/trt.R
 \name{trt}
 \alias{trt}
-\title{Test Retest Summary
- 
- This function calculates several common parameters for evaluating test-retest reliability. The output
- is a detailed list, containing one summarised tidy output called tidy.
- 
- @param values1 Values from the first measurements
- @param values2 Values from the second measurements
- 
- @examples
- trt( runif(20), runif(20) )
- 
- @export}
+\title{Test Retest Summary}
 \usage{
 trt(values1, values2)
 }
+\arguments{
+\item{values1}{Values from the first measurements}
+
+\item{values2}{Values from the second measurements}
+}
 \description{
-Test Retest Summary
- 
- This function calculates several common parameters for evaluating test-retest reliability. The output
- is a detailed list, containing one summarised tidy output called tidy.
- 
- @param values1 Values from the first measurements
- @param values2 Values from the second measurements
- 
- @examples
- trt( runif(20), runif(20) )
- 
- @export
+This function calculates several common parameters for evaluating test-retest reliability. The output
+is a detailed list, containing one summarised tidy output called tidy.
+}
+\examples{
+trt( runif(20), runif(20) )
+
 }
 

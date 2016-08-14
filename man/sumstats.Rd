@@ -2,29 +2,18 @@
 % Please edit documentation in R/sumstats.R
 \name{sumstats}
 \alias{sumstats}
-\title{Test Retest Summary Statistics
- 
- This function calculates several common summary statistic parameters useful for test-retest studies.
- 
- @param values Vector of values
- 
- @examples
- sumstats( runif(20) )
- 
- @export}
+\title{Test Retest Summary Statistics}
 \usage{
 sumstats(values)
 }
+\arguments{
+\item{values}{Vector of values}
+}
 \description{
-Test Retest Summary Statistics
- 
- This function calculates several common summary statistic parameters useful for test-retest studies.
- 
- @param values Vector of values
- 
- @examples
- sumstats( runif(20) )
- 
- @export
+This function calculates several common summary statistic parameters useful for test-retest studies.
+}
+\examples{
+sumstats( runif(20) )
+
 }
 

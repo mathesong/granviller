@@ -2,29 +2,18 @@
 % Please edit documentation in R/maxz.R
 \name{maxz}
 \alias{maxz}
-\title{Maximum Normalised Z Value
- 
- This function calculates the maximum normalised z values for a data set as well as the range.
- 
- @param values Vector of Values
- 
- @examples
- maxz( runif(20) )
- 
- @export}
+\title{Maximum Normalised Z Value}
 \usage{
 maxz(values)
 }
+\arguments{
+\item{values}{Vector of Values}
+}
 \description{
-Maximum Normalised Z Value
- 
- This function calculates the maximum normalised z values for a data set as well as the range.
- 
- @param values Vector of Values
- 
- @examples
- maxz( runif(20) )
- 
- @export
+This function calculates the maximum normalised z values for a data set as well as the range.
+}
+\examples{
+maxz( runif(20) )
+
 }
 

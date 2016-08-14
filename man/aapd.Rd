@@ -2,33 +2,21 @@
 % Please edit documentation in R/aapd.R
 \name{aapd}
 \alias{aapd}
-\title{Test Retest Average Absolute Percentage Difference
- 
- This function the average absolute percentage difference, as well as the individual means,
- individual differences and average percentage differences
- 
- @param values1 Values from the first measurements
- @param values2 Values from the second measurements
- 
- @examples
- trt( runif(20), runif(20) )
- 
- @export}
+\title{Test Retest Average Absolute Percentage Difference}
 \usage{
 aapd(values1, values2)
 }
+\arguments{
+\item{values1}{Values from the first measurements}
+
+\item{values2}{Values from the second measurements}
+}
 \description{
-Test Retest Average Absolute Percentage Difference
- 
- This function the average absolute percentage difference, as well as the individual means,
- individual differences and average percentage differences
- 
- @param values1 Values from the first measurements
- @param values2 Values from the second measurements
- 
- @examples
- trt( runif(20), runif(20) )
- 
- @export
+This function the average absolute percentage difference, as well as the individual means,
+individual differences and average percentage differences
+}
+\examples{
+trt( runif(20), runif(20) )
+
 }
 

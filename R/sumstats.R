@@ -1,13 +1,13 @@
-#'  Test Retest Summary Statistics
-#'  
-#'  This function calculates several common summary statistic parameters useful for test-retest studies.
-#'  
-#'  @param values Vector of values
-#'  
-#'  @examples
-#'  sumstats( runif(20) )
-#'  
-#'  @export
+#'Test Retest Summary Statistics
+#'
+#'This function calculates several common summary statistic parameters useful for test-retest studies.
+#'
+#'@param values Vector of values
+#'
+#'@examples
+#'sumstats( runif(20) )
+#'
+#'@export
 
 sumstats <- function(values) {
   

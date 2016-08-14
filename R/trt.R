@@ -1,15 +1,15 @@
-#'  Test Retest Summary
-#'  
-#'  This function calculates several common parameters for evaluating test-retest reliability. The output
-#'  is a detailed list, containing one summarised tidy output called tidy.
-#'  
-#'  @param values1 Values from the first measurements
-#'  @param values2 Values from the second measurements
-#'  
-#'  @examples
-#'  trt( runif(20), runif(20) )
-#'  
-#'  @export
+#'Test Retest Summary
+#'
+#'This function calculates several common parameters for evaluating test-retest reliability. The output
+#'is a detailed list, containing one summarised tidy output called tidy.
+#'
+#'@param values1 Values from the first measurements
+#'@param values2 Values from the second measurements
+#'
+#'@examples
+#'trt( runif(20), runif(20) )
+#'
+#'@export
 
 
 trt <- function(values1, values2) {
