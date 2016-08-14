@@ -8,6 +8,7 @@
 #'  
 #'  @examples
 #'  trt( runif(20), runif(20) )
+#'  
 #'  @export
 
 aapd <- function(values1, values2) {
@@ -19,10 +20,12 @@ aapd <- function(values1, values2) {
   percdiffs = (diffvals/means)*100
   avgpercdiff = mean(percdiffs)
   AAPD = mean(abs(percdiffs))
+  
   out <- list(means = means, 
               diffvals = diffvals, 
               percdiffs=percdiffs,
               avgpercdiff = avgpercdiff, 
               AAPD = AAPD)
+  
   return(out)
 }

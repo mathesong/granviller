@@ -12,6 +12,7 @@
  
  @examples
  trt( runif(20), runif(20) )
+ 
  @export}
 \usage{
 trt(values1, values2)
@@ -27,6 +28,7 @@ Test Retest Summary
  
  @examples
  trt( runif(20), runif(20) )
+ 
  @export
 }
 

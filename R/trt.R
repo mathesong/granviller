@@ -8,6 +8,7 @@
 #'  
 #'  @examples
 #'  trt( runif(20), runif(20) )
+#'  
 #'  @export
 
 

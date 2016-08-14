@@ -1,11 +1,12 @@
-#'  Test Retest Maximum Normalised Z Value
+#'  Maximum Normalised Z Value
 #'  
-#'  This function calculates the maximum normalised z values from a test-retest data set. This is calculated
+#'  This function calculates the maximum normalised z values for a data set as well as the range.
 #'  
 #'  @param values Vector of Values
 #'  
 #'  @examples
 #'  maxz( runif(20) )
+#'  
 #'  @export
 
 maxz <- function(values) {

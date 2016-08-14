@@ -2,27 +2,29 @@
 % Please edit documentation in R/maxz.R
 \name{maxz}
 \alias{maxz}
-\title{Test Retest Maximum Normalised Z Value
+\title{Maximum Normalised Z Value
  
- This function calculates the maximum normalised z values from a test-retest data set. This is calculated
+ This function calculates the maximum normalised z values for a data set as well as the range.
  
  @param values Vector of Values
  
  @examples
  maxz( runif(20) )
+ 
  @export}
 \usage{
 maxz(values)
 }
 \description{
-Test Retest Maximum Normalised Z Value
+Maximum Normalised Z Value
  
- This function calculates the maximum normalised z values from a test-retest data set. This is calculated
+ This function calculates the maximum normalised z values for a data set as well as the range.
  
  @param values Vector of Values
  
  @examples
  maxz( runif(20) )
+ 
  @export
 }
 

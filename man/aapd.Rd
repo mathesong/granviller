@@ -12,6 +12,7 @@
  
  @examples
  trt( runif(20), runif(20) )
+ 
  @export}
 \usage{
 aapd(values1, values2)
@@ -27,6 +28,7 @@ Test Retest Average Absolute Percentage Difference
  
  @examples
  trt( runif(20), runif(20) )
+ 
  @export
 }
 
