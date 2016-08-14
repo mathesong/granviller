@@ -4,8 +4,8 @@
 \alias{scatter_heatmap}
 \title{Scatter Heat Map}
 \usage{
-scatter_heatmap(xvalues, yvalues, xlabel, ylabel, alphaval = 1,
-  xlimits = c(0, 1), ylimits = c(0, 1))
+scatter_heatmap(xvalues, yvalues, xlabel, ylabel, xlimits, ylimits,
+  alphaval = 1)
 }
 \arguments{
 \item{xvalues}{X values}
@@ -16,11 +16,11 @@ scatter_heatmap(xvalues, yvalues, xlabel, ylabel, alphaval = 1,
 
 \item{ylabel}{Y axis label}
 
-\item{alphaval}{The transparency of the points}
-
 \item{xlimits}{Vector including limits of the x axis}
 
 \item{ylimits}{Vector including limits of the x axis}
+
+\item{alphaval}{The transparency of the points}
 }
 \value{
 Returns the ggplot2 plot
@@ -35,7 +35,7 @@ beyond the edge of the plot.
 x = rnorm(n = 50000, mean = 2, sd = 1)
 y = rexp(50000, 1)
 
-scatter_heatmap(x, y, 'X Values', 'Y Values', 1, c(0,3.5), c(-0.1, 8) )
+scatter_heatmap(x, y, 'X Values', 'Y Values', c(0, 3.5), c(-0.1, 8), 1 )
 
 }
 
