@@ -4,8 +4,8 @@
 \alias{scatter_heatmap}
 \title{Scatter Heat Map}
 \usage{
-scatter_heatmap(xvalues, yvalues, xlabel, ylabel, xlimits, ylimits,
-  alphaval = 1)
+scatter_heatmap(xvalues, yvalues, xlabel = "x", ylabel = "y",
+  xlimits = NULL, ylimits = NULL, alphaval = 1)
 }
 \arguments{
 \item{xvalues}{X values}

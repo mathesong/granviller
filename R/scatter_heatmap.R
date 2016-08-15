@@ -23,9 +23,12 @@
 #'
 #' @export
 
-scatter_heatmap <- function(xvalues, yvalues, xlabel, ylabel, xlimits, ylimits, alphaval = 1) {
+scatter_heatmap <- function(xvalues, yvalues, xlabel = 'x', ylabel = 'y', xlimits = NULL, ylimits = NULL, alphaval = 1) {
   
   datadf <- data.frame(xvals = xvalues, yvals = yvalues)
+  
+  if(is.null(xlimits)) xlimits=c(min(xvalues),max(xvalues))
+  if(is.null(ylimits)) ylimits=c(min(yvalues),max(yvalues)) 
   
   datadf = limit_df(datadf, c(xlimits[1], xlimits[2]), 1 )
   datadf = limit_df(datadf, c(ylimits[1], ylimits[2]), 2 )
