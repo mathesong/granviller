@@ -4,7 +4,8 @@
 \alias{percdata_lim}
 \title{Percentage Data Limits}
 \usage{
-percdata_lim(x, y, perc)
+percdata_lim(x, y, perc, xlo.start = NULL, xhi.start = NULL,
+  ylo.start = NULL, yhi.start = NULL)
 }
 \arguments{
 \item{x}{X values}
@@ -12,6 +13,14 @@ percdata_lim(x, y, perc)
 \item{y}{Y values}
 
 \item{perc}{The percentage of points which should be included in the final figure}
+
+\item{xlo.start}{Specify the starting parameter for xlo}
+
+\item{xhi.start}{Specify the starting parameter for xhi}
+
+\item{ylo.start}{Specify the starting parameter for ylo}
+
+\item{yhi.start}{Specify the starting parameter for yhi}
 }
 \value{
 Returns the x limits and the y limits for the new plot
