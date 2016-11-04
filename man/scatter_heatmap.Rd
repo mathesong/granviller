@@ -5,7 +5,7 @@
 \title{Scatter Heat Map}
 \usage{
 scatter_heatmap(xvalues, yvalues, xlabel = "x", ylabel = "y",
-  xlimits = NULL, ylimits = NULL, alphaval = 1)
+  xlimits = NULL, ylimits = NULL, alphaval = 1, colourPal = "Inferno")
 }
 \arguments{
 \item{xvalues}{X values}
@@ -21,6 +21,8 @@ scatter_heatmap(xvalues, yvalues, xlabel = "x", ylabel = "y",
 \item{ylimits}{Vector including limits of the x axis}
 
 \item{alphaval}{The transparency of the points}
+
+\item{colourPal}{The colour palette name from viridis to use - default is Inferno}
 }
 \value{
 Returns the ggplot2 plot
@@ -35,7 +37,7 @@ beyond the edge of the plot.
 x = rnorm(n = 50000, mean = 2, sd = 1)
 y = rexp(50000, 1)
 
-scatter_heatmap(x, y, 'X Values', 'Y Values', c(0, 3.5), c(-0.1, 8), 1 )
+scatter_heatmap(x, y, 'X Values', 'Y Values', c(0, 3.5), c(-0.1, 8), 1 , 'viridis')
 
 }
 
