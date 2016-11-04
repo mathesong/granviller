@@ -4,8 +4,8 @@
 \alias{scatter_heatmap}
 \title{Scatter Heat Map}
 \usage{
-scatter_heatmap(xvalues, yvalues, xlabel = "x", ylabel = "y",
-  xlimits = NULL, ylimits = NULL, alphaval = 1, colourPal = "Inferno")
+scatter_heatmap(xvalues, yvalues, xlabel = "x", ylabel = "y", xlim = NULL,
+  ylim = NULL, alphaval = 1, colourPal = "inferno", suckInVals = T)
 }
 \arguments{
 \item{xvalues}{X values}
@@ -16,21 +16,21 @@ scatter_heatmap(xvalues, yvalues, xlabel = "x", ylabel = "y",
 
 \item{ylabel}{Y axis label}
 
-\item{xlimits}{Vector including limits of the x axis}
+\item{xlim}{Vector including limits of the x axis}
 
-\item{ylimits}{Vector including limits of the x axis}
+\item{ylim}{Vector including limits of the x axis}
 
 \item{alphaval}{The transparency of the points}
 
 \item{colourPal}{The colour palette name from viridis to use - default is Inferno}
+
+\item{suckInVals}{Points beyond the limits will be sucked in to the edge values to depict that there exists more beyond the edge of the plot. Default is TRUE.}
 }
 \value{
 Returns the ggplot2 plot
 }
 \description{
 Function to plot a scatter plot where each point is coloured by its 2-dimensional density.
-Points beyond the limits will be sucked in to the edge values to depict that there exists more 
-beyond the edge of the plot.
 }
 \examples{
 

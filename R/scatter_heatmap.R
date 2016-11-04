@@ -1,17 +1,16 @@
 #' Scatter Heat Map
 #'
 #' Function to plot a scatter plot where each point is coloured by its 2-dimensional density.
-#' Points beyond the limits will be sucked in to the edge values to depict that there exists more 
-#' beyond the edge of the plot.
 #'
 #' @param xvalues X values
 #' @param yvalues Y values
 #' @param xlabel X axis label
 #' @param ylabel Y axis label
-#' @param xlimits Vector including limits of the x axis
-#' @param ylimits Vector including limits of the x axis
+#' @param xlim Vector including limits of the x axis
+#' @param ylim Vector including limits of the x axis
 #' @param alphaval The transparency of the points
 #' @param colourPal The colour palette name from viridis to use - default is Inferno
+#' @param suckInVals Points beyond the limits will be sucked in to the edge values to depict that there exists more beyond the edge of the plot. Default is TRUE.
 #'
 #' @return Returns the ggplot2 plot
 #'
@@ -24,22 +23,27 @@
 #'
 #' @export
 
-scatter_heatmap <- function(xvalues, yvalues, xlabel = 'x', ylabel = 'y', xlimits = NULL, ylimits = NULL, alphaval = 1, colourPal = 'inferno') {
+scatter_heatmap <- function(xvalues, yvalues, xlabel = 'x', ylabel = 'y', xlim = NULL, ylim = NULL, alphaval = 1, colourPal = 'inferno', suckInVals = T) {
   
   datadf <- data.frame(xvals = xvalues, yvals = yvalues)
   
-  if(is.null(xlimits)) xlimits=c(min(xvalues),max(xvalues))
-  if(is.null(ylimits)) ylimits=c(min(yvalues),max(yvalues)) 
+  if(is.null(xlim)) xlim=c(min(xvalues),max(xvalues))
+  if(is.null(ylim)) ylim=c(min(yvalues),max(yvalues)) 
   
-  datadf = limit_df(datadf, c(xlimits[1], xlimits[2]), 1 )
-  datadf = limit_df(datadf, c(ylimits[1], ylimits[2]), 2 )
+  if(suckInVals) {
+    datadf = limit_df(datadf, c(xlim[1], xlim[2]), 1 )
+    datadf = limit_df(datadf, c(ylim[1], ylim[2]), 2 )
+  } else {
+    datadf = subset(datadf, datadf$xvals > xlim[1] & datadf$xvals < xlim[2])
+    datadf = subset(datadf, datadf$yvals > ylim[1] & datadf$yvals < ylim[2])
+  }
   
   datadf$dens <- densCols(datadf$xvals, datadf$yvals, colramp = colorRampPalette(viridis::viridis(n = 1000, option = colourPal)))
   
   plot <- ggplot(datadf) + 
     geom_point(aes(y = yvals, x = xvals, col = dens), alpha=alphaval) + 
-    ylim(ylimits[1],ylimits[2]) + 
-    xlim(xlimits[1],xlimits[2]) + 
+    ylim(ylim[1],ylim[2]) + 
+    xlim(xlim[1],xlim[2]) + 
     scale_color_identity() + 
     xlab(xlabel) + ylab(ylabel)
   
