@@ -30,7 +30,7 @@ percdata_lim <- function(x, y, perc, xlo.start=NULL, xhi.start=NULL, ylo.start=N
   if(is.null(ylo.start)) ylo.start <- min(y)
   if(is.null(yhi.start)) yhi.start <- max(y)
 
-  outpar <- optim(par = c(xlo=xlo.start, xhi=xhi.start, ylo=ylo.start, yhi=yhi.start), fn = percdata_model, x=x,y=y,perc=90, control = list(fnscale=-1))
+  outpar <- optim(par = c(xlo=xlo.start, xhi=xhi.start, ylo=ylo.start, yhi=yhi.start), fn = percdata_model, x=x,y=y,perc=perc, control = list(fnscale=-1))
   
   xlim <- outpar$par[1:2]
   ylim <- outpar$par[3:4]
