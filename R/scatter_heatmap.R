@@ -24,7 +24,7 @@
 #'
 #' @export
 
-scatter_heatmap <- function(xvalues, yvalues, xlabel = 'x', ylabel = 'y', xlimits = NULL, ylimits = NULL, alphaval = 1, colourPal = 'Inferno') {
+scatter_heatmap <- function(xvalues, yvalues, xlabel = 'x', ylabel = 'y', xlimits = NULL, ylimits = NULL, alphaval = 1, colourPal = 'inferno') {
   
   datadf <- data.frame(xvals = xvalues, yvals = yvalues)
   
