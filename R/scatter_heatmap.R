@@ -20,6 +20,8 @@
 #' y = rexp(50000, 1)
 #' 
 #' scatter_heatmap(x, y, 'X Values', 'Y Values', c(0, 3.5), c(-0.1, 8), 1 , 'viridis')
+#' 
+#' @import ggplot2
 #'
 #' @export
 

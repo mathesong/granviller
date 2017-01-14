@@ -25,19 +25,26 @@ trt <- function(values1, values2) {
   sumstat2 = sumstats(values2)
   sumstat = sumstats(c(values1, values2))
   sem = sumstat$sd * sqrt(1 - icc$results$ICC[1])
-  md = sem * 1.96 * sqrt(2)
+  md = 100*(sem * 1.96 * sqrt(2))/sumstat$mean
+
   
-  tidyout = data.frame(icc = icc$results$ICC[1],
-                       avgpercdiff = diffs$avgpercdiff,
-                       aapd = diffs$AAPD,
-                       maxz = zvals$maxz,
-                       zrange = zvals$rangez,
-                       mean = sumstat$mean,
-                       sd = sumstat$sd,
-                       se = sumstat$se,
-                       cov = sumstat$cov,
-                       sem = sem,
-                       md = md)
+  tidyout = data.frame(
+    # Numerical
+    mean = sumstat$mean,
+    sd = sumstat$sd,
+    cov = sumstat$cov,
+    se = sumstat$se,
+    
+    # Distributional
+    skew=sumstat$skew,
+    kurtosis=sumstat$kurtosis,
+    
+    # Test-Retest
+    icc = icc$results$ICC[1],
+    aapd = diffs$AAPD,
+    sem = sem,
+    md = md,
+    avgpercchange = diffs$avgpercdiff)
   
   out <- list(tidy = tidyout, 
               icc = icc, 

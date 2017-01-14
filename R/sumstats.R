@@ -16,7 +16,10 @@ sumstats <- function(values) {
   seval = sdval / (length(values))^0.5
   covval = sdval / meanval
   
-  out = data.frame(mean = meanval, sd = sdval, se = seval, cov = covval)
+  skewval=psych::skew(values)
+  kurtosisval=psych::kurtosi(values)
+  
+  out = data.frame(mean = meanval, sd = sdval, se = seval, cov = covval, skew=skewval, kurtosis=kurtosisval)
   return(out)
   
 }
