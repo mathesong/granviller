@@ -10,21 +10,23 @@
 #' Association (ASA): https://www.amstat.org/asa/files/pdfs/EDU-ReproducibleResearchWebinarTranscript.pdf
 #' 
 #' @author Granville J Matheson, \email{mathesong@@gmail.com}
+#' 
+#' @export 
 
 initProjectFolder <- function() {
   
   # Data
-  file.create('RawData', showWarnings = F)
-  file.create('DerivedData', showWarnings = F)
+  dir.create('RawData', showWarnings = F)
+  dir.create('DerivedData', showWarnings = F)
   
   # Code
-  file.create('R', showWarnings = F)
-  file.create('Python', showWarnings = F)
-  file.create('MATLAB', showWarnings = F)
+  dir.create('R', showWarnings = F)
+  dir.create('Python', showWarnings = F)
+  dir.create('MATLAB', showWarnings = F)
   
   # Other
-  file.create('Notes', showWarnings = F)
-  file.create('Refs', showWarnings = F)
+  dir.create('Notes', showWarnings = F)
+  dir.create('Refs', showWarnings = F)
   
   # Misc text files
   system('touch Readme.txt')
