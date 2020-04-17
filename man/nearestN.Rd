@@ -22,4 +22,3 @@ a <- runif()
 nearestN(50, a)
 
 }
-

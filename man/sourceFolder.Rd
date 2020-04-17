@@ -16,4 +16,3 @@ Function to source all the R scripts within a given folder
 sourceFolder('C:/Viruses')
 
 }
-

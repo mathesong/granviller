@@ -13,4 +13,3 @@ Function to change directory to the directory stored in the clipboard
 cd()
 
 }
-

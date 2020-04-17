@@ -22,4 +22,3 @@ a <- runif()
 nearestV(50, a)
 
 }
-

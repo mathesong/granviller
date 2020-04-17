@@ -16,4 +16,3 @@ This function calculates several common summary statistic parameters useful for 
 sumstats( runif(20) )
 
 }
-

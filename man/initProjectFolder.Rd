@@ -16,11 +16,10 @@ Function to create a set of working folders for a reproducible project
 initProjectFolder()
 
 }
-\author{
-Granville J Matheson, \email{mathesong@gmail.com}
-}
 \references{
 The folder structure comes from Karl Broman's webinar for the American Statistical
 Association (ASA): https://www.amstat.org/asa/files/pdfs/EDU-ReproducibleResearchWebinarTranscript.pdf
 }
-
+\author{
+Granville J Matheson, \email{mathesong@gmail.com}
+}

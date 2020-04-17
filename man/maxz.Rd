@@ -16,4 +16,3 @@ This function calculates the maximum normalised z values for a data set as well 
 maxz( runif(20) )
 
 }
-

@@ -19,4 +19,3 @@ is a detailed list, containing one summarised tidy output called tidy.
 trt( runif(20), runif(20) )
 
 }
-

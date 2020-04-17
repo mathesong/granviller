@@ -4,8 +4,15 @@
 \alias{percdata_lim}
 \title{Percentage Data Limits}
 \usage{
-percdata_lim(x, y, perc, xlo.start = NULL, xhi.start = NULL,
-  ylo.start = NULL, yhi.start = NULL)
+percdata_lim(
+  x,
+  y,
+  perc,
+  xlo.start = NULL,
+  xhi.start = NULL,
+  ylo.start = NULL,
+  yhi.start = NULL
+)
 }
 \arguments{
 \item{x}{X values}
@@ -38,4 +45,3 @@ y <- rnorm(1000)
 percdata_lim(x,y,90)
 
 }
-

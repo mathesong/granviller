@@ -16,4 +16,3 @@ Function to check which computer I'm currently using, for adjusting directories.
 checkPC()
 
 }
-

@@ -22,4 +22,3 @@ a <- data.frame(Year = 1900:1980, Potatos = round(runif(81)*100))
 limit_df(a, c(0, 50), 2)
 
 }
-

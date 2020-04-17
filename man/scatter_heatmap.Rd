@@ -4,8 +4,17 @@
 \alias{scatter_heatmap}
 \title{Scatter Heat Map}
 \usage{
-scatter_heatmap(xvalues, yvalues, xlabel = "x", ylabel = "y", xlim = NULL,
-  ylim = NULL, alphaval = 1, colourPal = "inferno", suckInVals = T)
+scatter_heatmap(
+  xvalues,
+  yvalues,
+  xlabel = "x",
+  ylabel = "y",
+  xlim = NULL,
+  ylim = NULL,
+  alphaval = 1,
+  colourPal = "inferno",
+  suckInVals = T
+)
 }
 \arguments{
 \item{xvalues}{X values}
@@ -40,4 +49,3 @@ y = rexp(50000, 1)
 scatter_heatmap(x, y, 'X Values', 'Y Values', c(0, 3.5), c(-0.1, 8), 1 , 'viridis')
 
 }
-

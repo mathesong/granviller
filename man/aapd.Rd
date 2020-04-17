@@ -19,4 +19,3 @@ individual differences and average percentage differences
 trt( runif(20), runif(20) )
 
 }
-
